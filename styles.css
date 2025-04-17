@@ -1,0 +1,353 @@
+@font-face {
+    font-family: "MTSWide Black";
+    src: url("fonts/MTSWide-Black.ttf") format("truetype");
+} 
+@font-face {
+    font-family: "MTSWide Bold";
+    src: url("fonts/MTSWide-Bold.ttf") format("truetype");
+  }
+  
+@font-face {
+    font-family: "MTSWide Light";
+    src: url("fonts/MTSWide-Light.ttf") format("truetype");
+  }
+  
+  @font-face {
+    font-family: "MTSWide Medium";
+    src: url("fonts/MTSWide-Medium.ttf") format("truetype");
+  }
+  
+  @font-face {
+    font-family: "MTSWide Regular";
+    src: url("fonts/MTSWide-Regular.ttf") format("truetype");
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F2F3F7;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px; /* 85px (высота хедера) + 15px (доп.отступ) */
+}
+header {
+    background-color: #FFFFFF;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 85px;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.header__container {
+    max-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; /* Распределяем элементы по краям */
+    align-items: center;
+    padding: 0 40px;
+}
+.logo {
+    margin-right: 20px; /* Отступ между лого и текстом */
+}
+.logo img{
+    height: 40px;
+    width: auto;
+}
+.header__title {
+    font-size: 32px;
+    font-family: "MTSWide Bold";
+    color: #333;
+    margin: 0;
+    /* Текст теперь справа */
+}
+.background-wrapper {
+    max-width: 1700px; /* Чтобы контент не растягивался на весь экран */
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.description {
+    max-width: 800px;
+    text-align: center;
+    background: linear-gradient(130deg, #F1F6E0,#F2F3F7,#DDD2F2);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 0 auto 40px; /* Центрирование и отступ снизу */
+}
+
+.description h3 {
+    font-size: 28px;
+    font-family: "MTSWide Bold";
+    margin-bottom: 10px;
+    color: #333;
+    text-transform: uppercase; /* Делаем заглавными */
+    border-bottom: 3px solid #FF002F; /* Подчеркивание */
+    display: inline-block; /* Чтобы подчеркивание было по ширине текста */
+    padding-bottom: 5px;
+}
+
+.description p {
+    font-size: 18px;
+    font-family: "MTSWide Light";
+    color: #555;
+    line-height: 1.6; /* Улучшенная читаемость */
+    margin-top: 10px;
+}
+
+
+.team {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch; /* Растягиваем карточки */
+}
+.team-member {
+    background-color: white;
+    align-items: center;
+    margin: 20px;
+    padding: 20px;
+    width: 300px;
+    height: 670px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(130deg, #e3e3e2, #ffffff);
+    transition: transform 0.3s ease;
+    
+    display: flex;
+    flex-direction: column;
+
+}
+.team-member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.team-member img {
+    width: 100%;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.team-member h3 {
+    font-size: 19px;
+    font-family: "MTSWide Bold";
+    margin: 5px 0;
+}
+
+.team-member p {
+    font-size: 16px;
+    font-family: "MTSWide Light";
+    color: #666;
+    margin-bottom: 5px; 
+    margin-top: 5px;
+}
+
+.team-member .content {
+    flex-grow: 1; /* Растягивает контент */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Чтобы список не раздвигал карточку */
+}
+
+
+.tasks {
+    padding: 0;
+    margin: 0;
+    border-radius: 10px;
+    text-align: left;
+    width: 100%;
+    padding-left: 0;
+    max-height: 80px;
+}
+
+.tasks li {
+    padding: 5px 0;
+    font-family: "MTSWide Medium";
+    color: #333;
+    transition: all 0.3s ease-in-out;
+    list-style-position: inside;
+    align-items: left;
+}
+
+
+/* Фиксация кнопок внизу карточки */
+.social,
+.number {
+    margin-top: auto;
+}
+
+/* Стили для кнопки "Написать" */
+.telegram-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #FF002F;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-family: "MTSWide Medium";
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(101, 101, 101, 0.4);
+}
+
+.telegram-button img,
+.number img {
+    width: 20px;
+    height: 20px;
+    margin-top: 9px;
+}
+
+.telegram-button:hover,
+.number:hover {
+    background: white;
+    box-shadow: 0 10px 20px rgba(43, 98, 165, 0.53),
+    0 6px 6px rgba(17, 53, 95, 0.35);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform: translateY(-1px);
+    color: #FF002F;
+    font-family: "MTSWide Bold";
+}
+
+/* Стили для номера телефона */
+.number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px; 
+    gap: 8px;
+    background-color: #FF002F;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-family: "MTSWide Medium";
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(101, 101, 101, 0.4);
+    width: 180px;
+}
+
+.team-member {
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+}
+
+.telegram-button img,
+.number img {
+    transition: none !important; /* Отключаем анимацию для иконок */
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Отключаем эффекты hover для иконок */
+.telegram-button:hover img,
+.number:hover img {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Добавьте эти стили в конец вашего CSS */
+
+.team-member {
+    position: relative; /* Добавляем для позиционирования фото */
+}
+
+.team-member img {
+    transition: opacity 0.3s ease; /* Анимация перехода */
+}
+
+.team-member img:first-child {
+    position: relative;
+    z-index: 1;
+    opacity: 1;
+}
+
+.team-member img:nth-child(2) {
+    position: absolute;
+    top: 20px; /* Совпадает с padding карточки */
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 40px); /* Учитываем padding карточки */
+    z-index: 2;
+    opacity: 0;
+}
+
+.team-member:hover img:first-child {
+    opacity: 0;
+}
+
+.team-member:hover img:nth-child(2) {
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    /* Адаптация хедера */
+    header {
+        height: 70px;
+        padding: 0 15px;
+    }
+
+    .header__container {
+        padding: 0 20px;
+    }
+    
+    .logo {
+        left: 15px; /* Уменьшаем отступ лого */
+    }
+    
+    .logo img {
+        height: 30px;
+    }
+    
+    .header__title {
+        font-size: 18px;
+        margin-right: 10px; /* Отступ от правого края */
+    }
+    
+    /* Адаптация основного контента */
+    body {
+        padding-top: 70px;
+    }
+    
+    .description {
+        max-width: 90%;
+        padding: 15px;
+        margin: 20px auto;
+    }
+    
+    /* Адаптация карточек */
+    .team-member {
+        width: 90%;
+        padding: 15px;
+    }
+    
+    /* Адаптация кнопок */
+    .telegram-button,
+    .number {
+        width: 80%; /* Уменьшаем ширину кнопок */
+        margin: 8px auto; /* Центрируем с автоматическими отступами */
+        padding: 8px 12px; /* Уменьшаем padding */
+        font-size: 14px;
+    }
+    
+    /* Для самых маленьких экранов */
+    @media (max-width: 320px) {
+        .header__title {
+            font-size: 16px;
+            margin-left: 8px;
+        }
+        
+        .telegram-button,
+        .number {
+            width: 85%; /* Чуть шире кнопки */
+        }
+    }
+}
