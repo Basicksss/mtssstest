@@ -197,6 +197,7 @@ header {
     font-size: 16px;
     transition: all 0.3s ease-in-out;
     box-shadow: 0 4px 10px rgba(101, 101, 101, 0.4);
+    -webkit-tap-highlight-color: transparent; /* Убирает подсветку на мобильных */
 }
 
 .telegram-button img,
@@ -340,6 +341,16 @@ header {
         font-family: "MTSWide Light";
         color: #666;
     }
+
+    .tasks li {
+        padding: 5px 0;
+        font-size: 14px;
+        font-family: "MTSWide Medium";
+        color: #333;
+        transition: all 0.3s ease-in-out;
+        list-style-position: inside;
+        align-items: left;
+    }
     
     /* Адаптация кнопок */
     .telegram-button,
@@ -365,7 +376,6 @@ header {
             width: 85%; /* Чуть шире кнопки */
             text-decoration: none;
             -webkit-tap-highlight-color: transparent; /* Убирает подсветку на мобильных */
-
         }
     }
 }
