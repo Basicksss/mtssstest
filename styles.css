@@ -233,11 +233,23 @@ header {
     transition: all 0.3s ease-in-out;
     box-shadow: 0 4px 10px rgba(101, 101, 101, 0.4);
     width: 180px;
+    text-decoration: none;
 }
 
 .team-member {
     -webkit-tap-highlight-color: transparent;
     user-select: none;
+}
+
+.team-member h3 {
+    font-size: 14px;
+    font-family: "MTSWide Bold";
+}
+
+.team-member p {
+    font-size: 14px;
+    font-family: "MTSWide Light";
+    color: #666;
 }
 
 .telegram-button img,
@@ -325,7 +337,7 @@ header {
     
     /* Адаптация карточек */
     .team-member {
-        width: 90%;
+        width: 100%;
         padding: 15px;
     }
     
