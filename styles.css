@@ -336,7 +336,7 @@ header {
     }
     
     .team-member p {
-        font-size: 12px;
+        font-size: 11px;
         font-family: "MTSWide Light";
         color: #666;
     }
@@ -349,6 +349,8 @@ header {
         padding: 8px 12px; /* Уменьшаем padding */
         font-size: 14px;
         text-decoration: none;
+        -webkit-tap-highlight-color: transparent; /* Убирает подсветку на мобильных */
+
     }
     
     /* Для самых маленьких экранов */
@@ -362,6 +364,8 @@ header {
         .number {
             width: 85%; /* Чуть шире кнопки */
             text-decoration: none;
+            -webkit-tap-highlight-color: transparent; /* Убирает подсветку на мобильных */
+
         }
     }
 }
