@@ -361,6 +361,7 @@ header {
         font-size: 14px;
         text-decoration: none;
         -webkit-tap-highlight-color: transparent; /* Убирает подсветку на мобильных */
+        -webkit-appearance: none;
 
     }
     
@@ -376,6 +377,7 @@ header {
             width: 85%; /* Чуть шире кнопки */
             text-decoration: none;
             -webkit-tap-highlight-color: transparent; /* Убирает подсветку на мобильных */
+            -webkit-appearance: none;
         }
     }
 }
