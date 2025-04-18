@@ -136,13 +136,13 @@ header {
 }
 
 .team-member h3 {
-    font-size: 19px;
+    font-size: 16px;
     font-family: "MTSWide Bold";
     margin: 5px 0;
 }
 
 .team-member p {
-    font-size: 16px;
+    font-size: 13px;
     font-family: "MTSWide Light";
     color: #666;
     margin-bottom: 5px; 
@@ -233,7 +233,6 @@ header {
     transition: all 0.3s ease-in-out;
     box-shadow: 0 4px 10px rgba(101, 101, 101, 0.4);
     width: 180px;
-    text-decoration: none;
 }
 
 .team-member {
@@ -241,16 +240,6 @@ header {
     user-select: none;
 }
 
-.team-member h3 {
-    font-size: 14px;
-    font-family: "MTSWide Bold";
-}
-
-.team-member p {
-    font-size: 14px;
-    font-family: "MTSWide Light";
-    color: #666;
-}
 
 .telegram-button img,
 .number img {
@@ -340,6 +329,17 @@ header {
         width: 100%;
         padding: 15px;
     }
+
+    .team-member h3 {
+        font-size: 12px;
+        font-family: "MTSWide Bold";
+    }
+    
+    .team-member p {
+        font-size: 12px;
+        font-family: "MTSWide Light";
+        color: #666;
+    }
     
     /* Адаптация кнопок */
     .telegram-button,
@@ -348,6 +348,7 @@ header {
         margin: 8px auto; /* Центрируем с автоматическими отступами */
         padding: 8px 12px; /* Уменьшаем padding */
         font-size: 14px;
+        text-decoration: none;
     }
     
     /* Для самых маленьких экранов */
@@ -360,6 +361,7 @@ header {
         .telegram-button,
         .number {
             width: 85%; /* Чуть шире кнопки */
+            text-decoration: none;
         }
     }
 }
